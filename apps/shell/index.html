@@ -5,14 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite + React + TS</title>
-    <!-- <script type="module" src="http://localhost:3001/bundle.js"></script> -->
-    <!-- <script type="module" src="http://localhost:3001/bundle.js"></script> -->
     <script type="importmap">
       {
         "imports": {
           "react": "https://esm.sh/react",
           "react-dom": "https://esm.sh/react-dom",
-          "react-app": "http://localhost:3001/src/main.tsx"
+          "react-app": "http://localhost:3001/bundle.js"
         }
       }
     </script>
@@ -20,6 +18,5 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <!-- <react-app></react-app> -->
   </body>
 </html>

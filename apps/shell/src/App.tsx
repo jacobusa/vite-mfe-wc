@@ -15,15 +15,15 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route
-            path="/"
+            path="/hey"
             // Component={() => import("../views/Product.vue")}
             // element={<react-app></react-app>}
             // element={<div>hey</div>}
             element={<Dashboard />}
             // loader={}
           />
-          {/* <Route path="react" element={<ReactApp />} />
-          <Route path="vue" element={<VueApp />} />
+          <Route path="/" element={<>adsf</>} />
+          {/* <Route path="vue" element={<VueApp />} />
           <Route path="angular" element={<AngularApp />} /> */}
         </Routes>
       </BrowserRouter>
