@@ -1,0 +1,12 @@
+{
+  "name": "vite-mfe-wc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "pnpm --filter=shell --filter=react-app dev"
+  },
+  "keywords": [],
+  "author": "Jacobus Badenhorst",
+  "license": "ISC"
+}
