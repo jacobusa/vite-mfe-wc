@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "VITE_ENV=local pnpm --filter=shell --filter=react-app dev",
-    "build:dev": "VITE_ENV=dev pnpm --filter=shell --filter=react-app build:dev",
+    "build:dev": "VITE_ENV=dev pnpm --filter=shell --filter=react-app build",
     "preview:dev": "VITE_ENV=dev pnpm build:dev && VITE_ENV=dev pnpm --filter=shell --filter=react-app preview"
   },
   "keywords": [],
