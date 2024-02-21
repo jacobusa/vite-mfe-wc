@@ -1,6 +1,6 @@
 import * as React from "react";
 const str = "react-app";
-(await import(str)).default;
+(await import(/* @vite-ignore */ str)).default;
 
 interface DashboardProps {}
 

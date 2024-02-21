@@ -23,7 +23,7 @@ export default defineConfig({
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ["react", "react-dom"],
+      external: ["react", "react-dom", "react-router-dom"],
       // external: ["react", "react-dom", "react-to-webcomponent"],
       input: "./src/main.tsx",
       // preserveEntrySignatures: "exports-only",
@@ -35,6 +35,7 @@ export default defineConfig({
         globals: {
           react: "react",
           reactDom: "react-dom",
+          reactRouterDom: "react-router-dom",
           // reactToWebComponent: "react-to-webcomponent",
         },
       },
@@ -45,5 +46,10 @@ export default defineConfig({
   },
   server: {
     port: 3001,
+    origin: "http://localhost:3001",
   },
+  preview: {
+    port: 3001,
+  },
+  base: "http://localhost:3001",
 });
