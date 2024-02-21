@@ -1,10 +1,9 @@
 import { defineConfig } from "vite";
-import react from "@vitejs/plugin-react";
 // import { resolve } from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [],
   // build: {
   //   rollupOptions: {
   //     external: ["react", "react-dom"],
@@ -14,6 +13,9 @@ export default defineConfig({
   //     },
   //   },
   // },
+  // define: {
+  //   "react-app": JSON.stringify("dynamic"),
+  // },
   build: {
     manifest: true,
     minify: false,
@@ -21,7 +23,8 @@ export default defineConfig({
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ["react", "react-dom", "react-to-webcomponent"],
+      external: ["react", "react-dom"],
+      // external: ["react", "react-dom", "react-to-webcomponent"],
       input: "./src/main.tsx",
       // preserveEntrySignatures: "exports-only",
       output: {
@@ -32,7 +35,7 @@ export default defineConfig({
         globals: {
           react: "react",
           reactDom: "react-dom",
-          reactToWebComponent: "react-to-webcomponent",
+          // reactToWebComponent: "react-to-webcomponent",
         },
       },
     },

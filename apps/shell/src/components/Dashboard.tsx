@@ -4,6 +4,6 @@ const str = "react-app";
 
 interface DashboardProps {}
 
-export const Dashboard: React.FC<DashboardProps> = ({}) => {
+export const Dashboard: React.FC<DashboardProps> = () => {
   return <react-app></react-app>;
 };
