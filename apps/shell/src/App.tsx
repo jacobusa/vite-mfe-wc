@@ -1,6 +1,8 @@
-import { lazy } from "react";
+import { Suspense, lazy } from "react";
 import "./App.css";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { RouteManager } from "./components/RouteManager.tsx";
+import { Home } from "./components/Home.tsx";
 
 const Dashboard = lazy(() =>
   import("./components/Dashboard.tsx").then(({ Dashboard }) => ({
@@ -12,9 +14,17 @@ function App() {
   return (
     <>
       <BrowserRouter>
+        <RouteManager />
         <Routes>
-          <Route path="/dashboard/*" element={<Dashboard />} />
-          <Route path="/" element={<>adsf</>} />
+          <Route path="/" element={<Home />} />
+          <Route
+            path="/dashboard"
+            element={
+              <Suspense>
+                <Dashboard />
+              </Suspense>
+            }
+          />
           {/* <Route path="vue" element={<VueApp />} />
           <Route path="angular" element={<AngularApp />} /> */}
         </Routes>

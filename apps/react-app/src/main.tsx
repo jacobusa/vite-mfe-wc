@@ -12,7 +12,5 @@ import "./index.css";
 // );
 
 // eslint-disable-next-line react-refresh/only-export-components
-const WebComponent = reactToWebComponent(App, React, ReactDOMClient, {
-  shadow: "open",
-});
+const WebComponent = reactToWebComponent(App, React, ReactDOMClient);
 customElements.define("react-app", WebComponent);
