@@ -8,6 +8,31 @@ importers:
 
   .: {}
 
+  apps/angular-app:
+    dependencies:
+      '@angular/compiler':
+        specifier: 16.0.0-rc.3
+        version: 16.0.0-rc.3(@angular/core@16.0.0-rc.3)
+      '@angular/core':
+        specifier: 16.0.0-rc.3
+        version: 16.0.0-rc.3(rxjs@7.5.7)(zone.js@0.13.0)
+      '@angular/platform-browser':
+        specifier: 16.0.0-rc.3
+        version: 16.0.0-rc.3(@angular/common@16.0.0-rc.3)(@angular/core@16.0.0-rc.3)
+      rxjs:
+        specifier: 7.5.7
+        version: 7.5.7
+      zone.js:
+        specifier: 0.13.0
+        version: 0.13.0
+    devDependencies:
+      typescript:
+        specifier: ^5.2.2
+        version: 5.3.3
+      vite:
+        specifier: ^5.1.4
+        version: 5.1.4
+
   apps/react-app:
     dependencies:
       react:
@@ -133,6 +158,59 @@ packages:
       '@jridgewell/gen-mapping': 0.3.3
       '@jridgewell/trace-mapping': 0.3.22
     dev: true
+
+  /@angular/common@16.0.0-rc.3(@angular/core@16.0.0-rc.3)(rxjs@7.5.7):
+    resolution: {integrity: sha512-Vj36Fz2Bq3w6sRveJqAInLpLWsJINbQkI6DK2YWW/V41o8VXNPp4P26tlfg2BD8gQUOt+9kgEAx0/TdXT/8xmA==}
+    engines: {node: ^16.14.0 || >=18.10.0}
+    peerDependencies:
+      '@angular/core': 16.0.0-rc.3
+      rxjs: ^6.5.3 || ^7.4.0
+    dependencies:
+      '@angular/core': 16.0.0-rc.3(rxjs@7.5.7)(zone.js@0.13.0)
+      rxjs: 7.5.7
+      tslib: 2.6.2
+    dev: false
+
+  /@angular/compiler@16.0.0-rc.3(@angular/core@16.0.0-rc.3):
+    resolution: {integrity: sha512-9YlFhILShNsBE0NJC1UrQq93j7GLdLx1Xm+Mb4dHLblg1zqtGnJp1XT6I/PqJLivkNK0yieco50dMBuncbybtg==}
+    engines: {node: ^16.14.0 || >=18.10.0}
+    peerDependencies:
+      '@angular/core': 16.0.0-rc.3
+    peerDependenciesMeta:
+      '@angular/core':
+        optional: true
+    dependencies:
+      '@angular/core': 16.0.0-rc.3(rxjs@7.5.7)(zone.js@0.13.0)
+      tslib: 2.6.2
+    dev: false
+
+  /@angular/core@16.0.0-rc.3(rxjs@7.5.7)(zone.js@0.13.0):
+    resolution: {integrity: sha512-bbAQ7f7HvU2rsxlbkwY4StsuXIyzthpJGYkkdHe8D2CpMA+rkE8o10Ehhe2OoH5uP6ILcyT/9+Uy56N93pw+MA==}
+    engines: {node: ^16.14.0 || >=18.10.0}
+    peerDependencies:
+      rxjs: ^6.5.3 || ^7.4.0
+      zone.js: ~0.13.0
+    dependencies:
+      rxjs: 7.5.7
+      tslib: 2.6.2
+      zone.js: 0.13.0
+    dev: false
+
+  /@angular/platform-browser@16.0.0-rc.3(@angular/common@16.0.0-rc.3)(@angular/core@16.0.0-rc.3):
+    resolution: {integrity: sha512-WGnhDDQqotbkmclhspu/QZnFeJxRlEtKU9KYT3j5et6/mNtKGiKTG6gS6m1+PCbFWl7DL26nP/jwuNDjsQ411g==}
+    engines: {node: ^16.14.0 || >=18.10.0}
+    peerDependencies:
+      '@angular/animations': 16.0.0-rc.3
+      '@angular/common': 16.0.0-rc.3
+      '@angular/core': 16.0.0-rc.3
+    peerDependenciesMeta:
+      '@angular/animations':
+        optional: true
+    dependencies:
+      '@angular/common': 16.0.0-rc.3(@angular/core@16.0.0-rc.3)(rxjs@7.5.7)
+      '@angular/core': 16.0.0-rc.3(rxjs@7.5.7)(zone.js@0.13.0)
+      tslib: 2.6.2
+    dev: false
 
   /@babel/code-frame@7.23.5:
     resolution: {integrity: sha512-CgH3s1a96LipHCmSUmYFPwY7MNx8C3avkq7i4Wl3cfa662ldtUe4VM1TPXX70pfmrlWTb6jLqTYrZyT2ZTJBgA==}
@@ -1997,6 +2075,12 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
+  /rxjs@7.5.7:
+    resolution: {integrity: sha512-z9MzKh/UcOqB3i20H6rtrlaE/CgjLOvheWK/9ILrbhROGTweAi1BaFsTT9FbwZi5Trr1qNRs+MXkhmR06awzQA==}
+    dependencies:
+      tslib: 2.6.2
+    dev: false
+
   /scheduler@0.23.0:
     resolution: {integrity: sha512-CtuThmgHNg7zIZWAXi3AsyIzA3n4xx7aNyjwC2VJldO2LMVDhFK+63xGqq6CsJH4rTAt6/M+N4GhZiDYPx9eUw==}
     dependencies:
@@ -2087,6 +2171,10 @@ packages:
       typescript: 5.3.3
     dev: true
 
+  /tslib@2.6.2:
+    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
+    dev: false
+
   /type-check@0.4.0:
     resolution: {integrity: sha512-XleUoc9uwGXqjWwXaUTZAmzMcFZ5858QA2vvx1Ur5xIcixXIP+8LnFDgRplU30us6teqdlskFfu+ae4K79Ooew==}
     engines: {node: '>= 0.8.0'}
@@ -2161,6 +2249,41 @@ packages:
       fsevents: 2.3.3
     dev: true
 
+  /vite@5.1.4:
+    resolution: {integrity: sha512-n+MPqzq+d9nMVTKyewqw6kSt+R3CkvF9QAKY8obiQn8g1fwTscKxyfaYnC632HtBXAQGc1Yjomphwn1dtwGAHg==}
+    engines: {node: ^18.0.0 || >=20.0.0}
+    hasBin: true
+    peerDependencies:
+      '@types/node': ^18.0.0 || >=20.0.0
+      less: '*'
+      lightningcss: ^1.21.0
+      sass: '*'
+      stylus: '*'
+      sugarss: '*'
+      terser: ^5.4.0
+    peerDependenciesMeta:
+      '@types/node':
+        optional: true
+      less:
+        optional: true
+      lightningcss:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      terser:
+        optional: true
+    dependencies:
+      esbuild: 0.19.12
+      postcss: 8.4.35
+      rollup: 4.12.0
+    optionalDependencies:
+      fsevents: 2.3.3
+    dev: true
+
   /vue-template-compiler@2.7.16:
     resolution: {integrity: sha512-AYbUWAJHLGGQM7+cNTELw+KsOG9nl2CnSv467WobS5Cv9uk3wFcnr1Etsz2sEIHEZvw1U+o9mRlEO6QbZvUPGQ==}
     dependencies:
@@ -2219,3 +2342,9 @@ packages:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
     dev: true
+
+  /zone.js@0.13.0:
+    resolution: {integrity: sha512-7m3hNNyswsdoDobCkYNAy5WiUulkMd3+fWaGT9ij6iq3Zr/IwJo4RMCYPSDjT+r7tnPErmY9sZpKhWQ8S5k6XQ==}
+    dependencies:
+      tslib: 2.6.2
+    dev: false

@@ -1,0 +1,25 @@
+{
+  "name": "angular-app",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4"
+  },
+  "dependencies": {
+    "@angular/compiler": "16.0.0-rc.3",
+    "@angular/core": "16.0.0-rc.3",
+    "@angular/platform-browser": "16.0.0-rc.3",
+    "rxjs": "7.5.7",
+    "zone.js": "0.13.0"
+  }
+}

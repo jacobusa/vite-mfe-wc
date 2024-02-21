@@ -16,6 +16,12 @@ const VuePage = lazy(() =>
   }))
 );
 
+const AngularPage = lazy(() =>
+  import("./components/AngularPage.tsx").then(({ AngularPage }) => ({
+    default: AngularPage,
+  }))
+);
+
 function App() {
   return (
     <>
@@ -36,6 +42,14 @@ function App() {
             element={
               <Suspense>
                 <VuePage />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/angular"
+            element={
+              <Suspense>
+                <AngularPage />
               </Suspense>
             }
           />
