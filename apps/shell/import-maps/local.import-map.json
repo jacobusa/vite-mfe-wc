@@ -1,5 +1,6 @@
 {
   "imports": {
-    "react-app": "http://localhost:3001/src/main.tsx"
+    "react-app": "http://localhost:3001/src/main.tsx",
+    "vue-app": "http://localhost:3002/src/main.ts"
   }
 }

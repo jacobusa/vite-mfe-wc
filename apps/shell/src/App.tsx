@@ -10,6 +10,12 @@ const Dashboard = lazy(() =>
   }))
 );
 
+const VuePage = lazy(() =>
+  import("./components/VuePage.tsx").then(({ VuePage }) => ({
+    default: VuePage,
+  }))
+);
+
 function App() {
   return (
     <>
@@ -22,6 +28,14 @@ function App() {
             element={
               <Suspense>
                 <Dashboard />
+              </Suspense>
+            }
+          />
+          <Route
+            path="/vue"
+            element={
+              <Suspense>
+                <VuePage />
               </Suspense>
             }
           />

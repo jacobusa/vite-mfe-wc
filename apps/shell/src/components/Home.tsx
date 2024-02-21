@@ -8,6 +8,8 @@ export const Home: React.FC<HomeProps> = () => {
     <>
       <h1>Hi there :)</h1>
       <Link to={"/dashboard"}>To Dashboard</Link>
+      <br />
+      <Link to={"/vue"}>To Vue</Link>
     </>
   );
 };
