@@ -11,15 +11,8 @@ import "./index.css";
 //   </React.StrictMode>
 // );
 
+// eslint-disable-next-line react-refresh/only-export-components
 const WebComponent = reactToWebComponent(App, React, ReactDOMClient, {
   shadow: "open",
 });
-
-if (!customElements.get("react-app")) {
-  customElements.define("react-app", WebComponent);
-}
-
-// export const mount = () => {
-//   const WebComponent = reactToWebComponent(App, React, ReactDOMClient);
-//   customElements.define("react-app", WebComponent);
-// };
+customElements.define("react-app", WebComponent);

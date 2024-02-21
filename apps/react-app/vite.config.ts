@@ -46,4 +46,8 @@ export default defineConfig({
   server: {
     port: 3001,
   },
+  preview: {
+    port: 3001,
+  },
+  base: "http://localhost:3001",
 });
