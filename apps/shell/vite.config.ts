@@ -17,7 +17,16 @@ export default defineConfig(({ mode }) => {
       target: "esnext",
       minify: false,
       rollupOptions: {
-        external: ["react-app"],
+        // make sure to externalize deps that shouldn't be bundled into your library.
+        // lots of these are served from cdn
+        external: ["react", "react-dom", "react-router-dom"],
+        output: {
+          globals: {
+            react: "react",
+            reactDom: "react-dom",
+            reactRouterDom: "react-router-dom",
+          },
+        },
       },
     },
   };

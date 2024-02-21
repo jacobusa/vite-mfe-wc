@@ -1,7 +1,5 @@
 {
   "imports": {
-    "react": "https://esm.sh/react",
-    "react-dom": "https://esm.sh/react-dom",
     "react-app": "http://localhost:3001/src/main.tsx"
   }
 }
