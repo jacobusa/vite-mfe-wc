@@ -11,7 +11,9 @@
     "check:all:local": "VITE_ENV=local pnpm build:dev && VITE_ENV=dev pnpm --filter=shell --filter=react-app preview",
     "build-storybook": "nx run shared-ui:build-storybook",
     "storybook": "nx run shared-ui:storybook",
-    "graph": "nx graph"
+    "graph": "nx graph",
+    "build": "nx run-many -t build",
+    "check:all": "nx run-many -t build test-lint"
   },
   "keywords": [],
   "author": "Accolite",

@@ -13,12 +13,18 @@ pnpm create vite@latest
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ✨ **This workspace uses [Nx, Smart Monorepos · Fast CI.](https://nx.dev)** ✨
+
 Scaffolded from pnpm workspaces using:
 
 ```bash
 pnpm dlx nx@latest init
 ```
 
+<br>
+
+> This repo is a [Package Based Repo](https://nx.dev/concepts/integrated-vs-package-based)
+
+<br>
 # See which projects are affected ny command
 
 ```bash
@@ -33,14 +39,6 @@ Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provid
 ## Set up CI!
 
 - [Learn more how to setup CI](https://nx.dev/recipes/ci)
-
-## Create React Storybook
-
-```bash
-npx storybook@latest init
-# or if using nx plugins
-pnpm nx add @nx/storybook
-```
 
 # Show projects affected by build command
 
@@ -58,4 +56,15 @@ pnpm graph
 
 ```bash
 pnpm nx show project react-app --web
+```
+
+# Run Coommands
+
+[Run Tasks](https://nx.dev/features/run-tasks)
+
+```bash
+pnpx nx run-many -t build
+pnpx nx run-many -t build lint test
+npx nx run-many -t build lint test -p react-app vue-app
+npx nx affected -t test
 ```
