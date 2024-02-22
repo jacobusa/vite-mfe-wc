@@ -63,7 +63,12 @@ pnpm nx show project react-app --web
 [Run Tasks](https://nx.dev/features/run-tasks)
 
 ```bash
+pnpx nx build react-app
 pnpx nx run-many -t build
+
+#no cache
+pnpx nx run-many --target=build
+
 pnpx nx run-many -t build lint test
 npx nx run-many -t build lint test -p react-app vue-app
 npx nx affected -t test
