@@ -6,9 +6,14 @@
   "scripts": {
     "dev": "VITE_ENV=local pnpm --filter=shell --filter=react-app --filter=vue-app --filter=angular-app dev",
     "build:dev": "VITE_ENV=dev pnpm --filter=shell --filter=react-app build",
-    "preview:dev": "VITE_ENV=dev pnpm build:dev && VITE_ENV=dev pnpm --filter=shell --filter=react-app preview"
+    "preview:dev": "VITE_ENV=dev pnpm build:dev && VITE_ENV=dev pnpm --filter=shell --filter=react-app preview",
+    "check:all:local": "VITE_ENV=local pnpm build:dev && VITE_ENV=dev pnpm --filter=shell --filter=react-app preview",
+    "graph": "nx graph"
   },
   "keywords": [],
   "author": "Accolite",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "nx": "18.0.4"
+  }
 }
