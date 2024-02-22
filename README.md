@@ -37,6 +37,8 @@ Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provid
 ## Create React Storybook
 
 ```bash
+npx storybook@latest init
+# or if using nx plugins
 pnpm nx add @nx/storybook
 ```
 

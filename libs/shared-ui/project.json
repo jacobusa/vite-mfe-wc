@@ -1,7 +1,7 @@
 {
-  "name": "react-app",
+  "name": "shared-ui",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "apps/react-app/src",
+  "sourceRoot": "packages/shared-ui/src",
   "projectType": "application",
   "targets": {},
   "tags": []
