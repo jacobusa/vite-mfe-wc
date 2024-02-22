@@ -3,6 +3,9 @@
     "react": "https://esm.sh/react",
     "react-dom": "https://esm.sh/react-dom",
     "react-router-dom": "https://esm.sh/react-router-dom",
-    "react-app": "http://localhost:3001/bundle.js"
+    "react-app": "http://localhost:3001/bundle.js",
+    "vue-app": "http://localhost:3002/bundle.js",
+    "angular-app": "http://localhost:3003/bundle.js",
+    "shared-ui": "http://localhost:3004/bundle.js"
   }
 }

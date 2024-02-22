@@ -1,4 +1,4 @@
-import { createApp, defineCustomElement } from "vue";
+import { defineCustomElement } from "vue";
 import "./style.css";
 import App from "./App.vue";
 

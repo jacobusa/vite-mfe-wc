@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
 // import { resolve } from "path";
 
 // https://vitejs.dev/config/
@@ -19,23 +19,24 @@ export default defineConfig({
   build: {
     manifest: true,
     minify: false,
-    target: "esnext",
+    target: 'esnext',
     rollupOptions: {
       // make sure to externalize deps that shouldn't be bundled
       // into your library
-      external: ["react", "react-dom", "react-router-dom"],
+      external: ['react', 'react-dom', 'react-router-dom', 'shared-ui'],
       // external: ["react", "react-dom", "react-to-webcomponent"],
-      input: "./src/main.tsx",
+      input: './src/main.tsx',
       // preserveEntrySignatures: "exports-only",
       output: {
-        entryFileNames: "bundle.js",
-        format: "esm",
+        entryFileNames: 'bundle.js',
+        format: 'esm',
         // Provide global variables to use in the UMD build
         // for externalized deps
         globals: {
-          react: "react",
-          reactDom: "react-dom",
-          reactRouterDom: "react-router-dom",
+          react: 'react',
+          reactDom: 'react-dom',
+          reactRouterDom: 'react-router-dom',
+          sharedUI: 'shared-ui',
           // reactToWebComponent: "react-to-webcomponent",
         },
       },
@@ -46,10 +47,10 @@ export default defineConfig({
   },
   server: {
     port: 3001,
-    origin: "http://localhost:3001",
+    origin: 'http://localhost:3001',
   },
   preview: {
     port: 3001,
   },
-  base: "http://localhost:3001",
+  base: 'http://localhost:3001',
 });
