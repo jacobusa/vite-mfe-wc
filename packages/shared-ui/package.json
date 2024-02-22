@@ -3,6 +3,11 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "types": "dist/main",
+  "module": "./dist/shared-ui.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -21,6 +26,7 @@
     "@storybook/addon-links": "^7.6.17",
     "@storybook/addon-onboarding": "^1.0.11",
     "@storybook/blocks": "^7.6.17",
+    "@storybook/builder-vite": "^7.6.17",
     "@storybook/react": "^7.6.17",
     "@storybook/react-vite": "^7.6.17",
     "@storybook/test": "^7.6.17",
@@ -35,6 +41,7 @@
     "eslint-plugin-storybook": "^0.8.0",
     "storybook": "^7.6.17",
     "typescript": "^5.2.2",
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.7.3"
   }
 }

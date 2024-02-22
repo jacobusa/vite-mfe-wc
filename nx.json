@@ -3,7 +3,13 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build,test,lint,typecheck", "build-storybook"]
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "typecheck",
+          "build-storybook"
+        ]
       }
     }
   },
@@ -28,6 +34,7 @@
       "dependsOn": ["^build"]
     },
     "dev": {
+      "inputs": ["noMarkdown", "^noMarkdown"],
       "dependsOn": ["^build"]
     },
     "test": {

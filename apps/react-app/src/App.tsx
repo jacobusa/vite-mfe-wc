@@ -1,8 +1,8 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./App.css";
-import { Comments } from "./components/Comments";
-import { Home } from "./components/Home";
-import { Info } from "./components/Info";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import './App.css';
+import { Comments } from './components/Comments';
+import { Home } from './components/Home';
+import { Info } from './components/Info';
 
 function App() {
   return (

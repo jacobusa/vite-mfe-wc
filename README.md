@@ -1,5 +1,57 @@
 # Modern Microfrontend Architecture: A Browser Native Approach
 
+<br>
+
+# Run Commands
+
+- NX cache is enabled for all commands.
+  - For example, if you run a build, the second time you run a build, as long as no files have changed, NX will retreive the cache immediately
+- When running a command, NX looks through all the `package.json` files in the projects specified by `pnpm-workspace.yaml` file and runs the matching target.
+
+[More info on running NX tasks](https://nx.dev/features/run-tasks)
+
+```bash
+# install
+pnpm i
+
+# install for specific project
+pnpm i -D --filter shared-ui @storybook/builder-vite
+
+# run a single app
+pnpm nx dev react-app
+pnpm nx run react-app:dev
+
+# build a single app
+pnpm nx build react-app
+pnpm nx run react-app:build
+
+# run build on all projects
+pnpm nx run-many -t build
+pnpm nx run-many --target=build
+
+# run build on specific projects
+pnpm nx run-many -t build -p shell react-app
+pnpm nx run-many --target=build --projects=shell,react-app
+
+# run build and preview on all projects
+pnpm nx run-many -t build preview
+pnpm nx run-many -t build preview -p shell react-app
+
+# See dependancy graph
+pnpm graph
+
+# See affected projects by command
+pnpm nx affected -t build
+pnpm nx affected:build
+
+# Show project
+# JSON
+pnpm nx show project shared-ui
+# Web
+pnpm nx show project shared-ui --web
+
+```
+
 ### Create a Microfrontend using vite
 
 Run following commands
@@ -10,6 +62,7 @@ pnpm create vite@latest
 ```
 
 <br>
+
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
 
 ✨ **This workspace uses [Nx, Smart Monorepos · Fast CI.](https://nx.dev)** ✨
@@ -28,7 +81,7 @@ pnpm dlx nx@latest init
 # See which projects are affected ny command
 
 ```bash
-npx nx affected:build
+pnpx nx affected:build
 ```
 
 ## Want better Editor Integration?
@@ -39,37 +92,3 @@ Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provid
 ## Set up CI!
 
 - [Learn more how to setup CI](https://nx.dev/recipes/ci)
-
-# Show projects affected by build command
-
-```bash
-npx nx affected:build
-```
-
-# Show dependancy graph
-
-```bash
-pnpm graph
-```
-
-# Show project details
-
-```bash
-pnpm nx show project react-app --web
-```
-
-# Run Coommands
-
-[Run Tasks](https://nx.dev/features/run-tasks)
-
-```bash
-pnpx nx build react-app
-pnpx nx run-many -t build
-
-#no cache
-pnpx nx run-many --target=build
-
-pnpx nx run-many -t build lint test
-npx nx run-many -t build lint test -p react-app vue-app
-npx nx affected -t test
-```

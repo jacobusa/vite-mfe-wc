@@ -4,17 +4,13 @@
   "description": "",
   "private": true,
   "scripts": {
-    "dev": "VITE_ENV=local nx run-many -t dev -p shell react-app vue-app angular-app dev",
-    "build:all:dev": "VITE_ENV=dev nx run-many -t build",
-    "build:dev": "VITE_ENV=dev nx build",
-    "preview:dev": "VITE_ENV=dev pnpm build:dev && VITE_ENV=dev pnpm --filter=shell --filter=react-app preview",
-    "check:all:local": "VITE_ENV=local pnpm build:dev && VITE_ENV=dev pnpm --filter=shell --filter=react-app preview",
+    "dev": "VITE_ENV=local nx run-many -t dev -p shell react-app vue-app angular-app --maxParallel=10",
+    "preview": "VITE_ENV=dev nx run-many -t build preview -p shell react-app vue-app angular-app shared-ui --maxParallel=10",
+    "build": "nx run-many -t build",
     "build-storybook": "nx run shared-ui:build-storybook",
     "build:shared-ui": "nx run shared-ui:build",
     "storybook": "nx run shared-ui:storybook",
-    "graph": "nx graph",
-    "build": "nx run-many -t build",
-    "check:all": "nx run-many -t build test-lint"
+    "graph": "nx graph"
   },
   "keywords": [],
   "author": "Accolite",

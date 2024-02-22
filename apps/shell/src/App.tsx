@@ -1,23 +1,23 @@
-import { Suspense, lazy } from "react";
-import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { RouteManager } from "./components/RouteManager.tsx";
-import { Home } from "./components/Home.tsx";
+import { Suspense, lazy } from 'react';
+import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { RouteManager } from './components/RouteManager.tsx';
+import { Home } from './components/Home.tsx';
 
 const Dashboard = lazy(() =>
-  import("./components/Dashboard.tsx").then(({ Dashboard }) => ({
+  import('./components/Dashboard.tsx').then(({ Dashboard }) => ({
     default: Dashboard,
   }))
 );
 
 const VuePage = lazy(() =>
-  import("./components/VuePage.tsx").then(({ VuePage }) => ({
+  import('./components/VuePage.tsx').then(({ VuePage }) => ({
     default: VuePage,
   }))
 );
 
 const AngularPage = lazy(() =>
-  import("./components/AngularPage.tsx").then(({ AngularPage }) => ({
+  import('./components/AngularPage.tsx').then(({ AngularPage }) => ({
     default: AngularPage,
   }))
 );
@@ -32,7 +32,7 @@ function App() {
           <Route
             path="/dashboard"
             element={
-              <Suspense>
+              <Suspense fallback={<div>loading dashboard</div>}>
                 <Dashboard />
               </Suspense>
             }
@@ -40,7 +40,7 @@ function App() {
           <Route
             path="/vue"
             element={
-              <Suspense>
+              <Suspense fallback={<div>loading vue</div>}>
                 <VuePage />
               </Suspense>
             }
@@ -48,7 +48,7 @@ function App() {
           <Route
             path="/angular"
             element={
-              <Suspense>
+              <Suspense fallback={<div>loading angular</div>}>
                 <AngularPage />
               </Suspense>
             }

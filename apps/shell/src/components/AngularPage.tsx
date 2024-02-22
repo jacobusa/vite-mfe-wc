@@ -1,5 +1,5 @@
-import * as React from "react";
-const str = "angular-app";
+import * as React from 'react';
+const str = 'angular-app';
 (await import(/* @vite-ignore */ str)).default;
 
 interface DashboardProps {}
