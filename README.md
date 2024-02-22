@@ -33,3 +33,27 @@ Have a look at the [Nx Console extensions](https://nx.dev/nx-console). It provid
 ## Set up CI!
 
 - [Learn more how to setup CI](https://nx.dev/recipes/ci)
+
+## Create React Storybook
+
+```bash
+pnpm nx add @nx/storybook
+```
+
+# Show projects affected by build command
+
+```bash
+npx nx affected:build
+```
+
+# Show dependancy graph
+
+```bash
+pnpm graph
+```
+
+# Show project details
+
+```bash
+pnpm nx show project react-app --web
+```

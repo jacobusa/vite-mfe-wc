@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev": "VITE_ENV=local pnpm --filter=shell --filter=react-app --filter=vue-app --filter=angular-app dev",
-    "build:dev": "VITE_ENV=dev pnpm --filter=shell --filter=react-app build",
+    "build:all:dev": "VITE_ENV=dev pnpm --filter=shell --filter=react-app build",
+    "build:dev": "VITE_ENV=dev nx build",
     "preview:dev": "VITE_ENV=dev pnpm build:dev && VITE_ENV=dev pnpm --filter=shell --filter=react-app preview",
     "check:all:local": "VITE_ENV=local pnpm build:dev && VITE_ENV=dev pnpm --filter=shell --filter=react-app preview",
     "graph": "nx graph"
@@ -14,6 +15,9 @@
   "author": "Accolite",
   "license": "MIT",
   "devDependencies": {
-    "nx": "18.0.4"
+    "@nx/storybook": "18.0.4",
+    "@nx/web": "18.0.4",
+    "nx": "18.0.4",
+    "storybook": "^7.5.3"
   }
 }
